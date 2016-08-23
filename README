@@ -1,0 +1,13 @@
+You should have django 1.8+
+
+By the following commands; install all the dependencies (in linux):
+	sudo pip install TwitterAPI
+	sudo pip install --upgrade requests
+
+
+Assumptions made:
+1) I have sent the emails from my mail ID instead of Hashtag@EversnapApp.com as I didn't have its password.
+
+2) Since refreshing of the album is done in every 20 minutes, it is possible that quite many images are added at once (say from 290 they become 300+ after refresh (but are still less than 400)). In that case, a mail will be sent with subject "#carnival has 300 photos". Hence, the last mail will have subject "#carnival has 500 photos". It will be sent when the album has 500+ photos for the first time. On increment in number of photos later, no email will be sent.
+
+3) The REST API and facebook upload has not been done yet.
